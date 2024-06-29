@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number" placeholder="Enter digit ">
+    <button onclick="Fibonacci_series()">Check</button>
+    <p id="display"></p>
+    <script>
+        function Fibonacci_series(){
+            var x=document.getElementById("number").value;
+            
+            var a=0;
+            var b=1;
+            document.write(a+"  "+b);
+            var i=3;
+            while (i<=x){
+                i=i+1;
+                var j=a+b;
+
+                document.write("    "+j);
+                a=b;
+                b=j;
+            }
+           document.getElementById("display").innerHTML=j;
+        }
+    </script>
+</body>
+</html>

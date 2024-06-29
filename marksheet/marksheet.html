@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>
+                ----------------Marksheet---------------
+        </h1>
+        <h2>Student Name:- Praveen Dangi</h2>
+        <h2>Father's Name:- Mr. Vikram Singh Dangi</h2>
+        <h4>Date Of Birth:- 02 jan 2002</h4>
+        <h4>Roll No:-   294533258</h4>
+        <h4>Class:- 12th</h4>
+    <input type="text" id="nm1" placeholder="Enter Marks of English "><br>
+    <input type="text" id="nm2" placeholder="Enter Marks of Hindi "><br>
+    <input type="text" id="nm3" placeholder="Enter Marks of Maths "><br>
+    <input type="text" id="nm4" placeholder="Enter Marks of Physics "><br>
+    <input type="text" id="nm5" placeholder="Enter Marks of Chemistry "><br>
+    <button onclick="get_input()">Submit</button>
+    <p id="display"></p>
+    <!-- <p id="display1"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+    <p id="display4"></p> -->
+    <script>
+        function get_input(){
+            var a=parseFloat(document.getElementById("nm1").value);
+            var b=parseFloat(document.getElementById("nm2").value);
+            var c=parseFloat(document.getElementById("nm3").value);
+            var d=parseFloat(document.getElementById("nm4").value);
+            var e=parseFloat(document.getElementById("nm5").value);
+            var sum=a+b+c+d+e;
+            var per=sum/5;
+            //alert(x)
+            document.getElementById("display").innerHTML=sum;
+            // document.getElementById("display1").innerHTML=b;
+            // document.getElementById("display2").innerHTML=c;
+            // document.getElementById("display3").innerHTML=d;
+            // document.getElementById("display4").innerHTML=e;
+            
+            //document.write("Total Marks=",sum,"<br>")
+            //document.write("Percentage=",per,"%","<br>");
+            if     (a<0 || b<0 || c<0 || d<0 || e<0 || a>100 || b>100 || c>100 || d>100 || e>100){
+                    document.getElementById("display").innerHTML="Invalid Marks";
+                    }
+            else if((a<33&&b>33&&c>33&&d>33&&e>33)||
+                    (a>33&&b<33&&c>33&&d>33&&e>33)||
+                    (a>33&&b>33&&c<33&&d>33&&e>33)||
+                    (a>33&&b>33&&c>33&&d<33&&e>33)||
+                    (a>33&&b>33&&c>33&&d>33&&e<33)
+                    ){
+                    document.getElementById("display").innerHTML=
+                    ("Total Marks ="+sum+"<br>"+"Percentage ="+per+"%"+"<br>"+"Fail in One subject");
+                    
+                    }
+            else if(    (a<33&&b<33&&c>33&&d>33&&e>33)||
+                        (a<33&&b>33&&c<33&&d>33&&e>33)||
+                        (a<33&&b>33&&c>33&&d<33&&e>33)||
+                        (a<33&&b>33&&c>33&&d>33&&e<33)||
+                       
+                        (a>33&&b<33&&c<33&&d>33&&e>33)||
+                        (a>33&&b<33&&c>33&&d<33&&e>33)||
+                        (a>33&&b<33&&c>33&&d>33&&e<33)||
+
+                        (a>33&&b>33&&c<33&&d<33&&e>33)||
+                        (a>33&&b>33&&c<33&&d>33&&e<33)||
+                        
+                        (a>33&&b>33&&c>33&&d<33&&e<33)
+                    
+                    ){
+                    document.getElementById("display").innerHTML=
+                    ("Total Marks ="+sum+"<br>"+"Percentage ="+per+"%"+"<br>"+"Fail in Two subject");
+                    }
+            else if(    (a<33&&b<33&&c<33&&d>33&&e>33)||
+                        (a<33&&b>33&&c<33&&d<33&&e>33)||
+                        (a<33&&b>33&&c>33&&d<33&&e<33)||
+                        (a<33&&b<33&&c>33&&d<33&&e>33)||
+                        (a<33&&b>33&&c<33&&d>33&&e<33)||
+                        (a<33&&b<33&&c>33&&d>33&&e<33)||
+
+                        (a>33&&b<33&&c<33&&d<33&&e>33)||
+                        (a>33&&b<33&&c<33&&d>33&&e<33)||
+                        (a>33&&b<33&&c>33&&d<33&&e<33)||
+
+                        (a>33&&b>33&&c<33&&d<33&&e<33)
+                    
+                    ){
+                    document.getElementById("display").innerHTML=
+                    ("Total Marks ="+sum+"<br>"+"Percentage ="+per+"%"+"<br>"+"Fail in Three subject");   
+                    }
+            else if((a<33&&b<33&&c<33&&d<33&&e>33)||
+                    (a>33&&b<33&&c<33&&d<33&&e<33)||
+                    (a<33&&b>33&&c<33&&d<33&&e<33)||
+                    (a<33&&b<33&&c>33&&d<33&&e<33)||
+                    (a<33&&b<33&&c<33&&d>33&&e<33)
+                    ){
+                    document.getElementById("display").innerHTML=
+                    ("Total Marks ="+sum+"<br>"+"Percentage ="+per+"%"+"<br>"+"Fail in Four subject");  
+                    }
+            else if(a<33&&b<33&&c<33&&d<33&&e<33){
+                    document.getElementById("display").innerHTML=
+                    ("Total Marks ="+sum+"<br>"+"Percentage ="+per+"%"+"<br>"+"Fail in All subject");
+                    }
+            else if (per>=45 && per<60){
+                    document.getElementById("display").innerHTML=
+                    ("Total Marks ="+sum+"<br>"+"Percentage ="+per+"%"+"<br>"+"Pass with 3rd Division ");
+                    }
+            else if(per>59 && per<75){
+                    document.getElementById("display").innerHTML=
+                    ("Total Marks ="+sum+"<br>"+"Percentage ="+per+"%"+"<br>"+"Pass with 2nd Division ");
+                    }
+            else    {
+                    document.getElementById("display").innerHTML=
+                    ("Total Marks ="+sum+"<br>"+"Percentage ="+per+"%"+"<br>"+"Pass with 1st Division ");
+                    }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>

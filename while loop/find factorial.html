@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number" placeholder="Enter digit ">
+    <button onclick="factorial_()">Check</button>
+    <p id="display"></p>
+    <script>
+        function factorial_(){
+            var a=document.getElementById("number").value;
+            
+            var i=1;
+            var j=1;
+           
+            while (i<=a){
+                var j=j*i;
+                i=i+1;
+            }
+            document.getElementById("display").innerHTML=j;
+        }
+    </script>
+</body>
+</html>

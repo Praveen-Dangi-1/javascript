@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <input type="text" id="nm1" placeholder="Enter first number"><br>
+    <input type="text" id="nm2" placeholder="Enter second number"><br><br>
+
+    <button onclick="Add_()">Add</button>
+    <button onclick="Subtract_()">Subtract</button>
+    <button onclick="Multiply_()">Multiply</button>
+    <button onclick="Divide_()">Divide</button>
+
+    <p id="display"></p>
+    <script>
+       
+        function Add_(){
+            var x=parseFloat(document.getElementById("nm1").value);
+            var y=parseFloat(document.getElementById("nm2").value);
+            var z=x+y;
+            
+            var a=document.getElementById("display").innerHTML=z;
+           
+
+          
+        }
+        function Subtract_(){
+            var x=parseFloat(document.getElementById("nm1").value);
+            var y=parseFloat(document.getElementById("nm2").value);
+            var z=x-y;
+            document.getElementById("display").innerHTML=z;
+        }
+        function Multiply_(){
+            var x=parseFloat(document.getElementById("nm1").value);
+            var y=parseFloat(document.getElementById("nm2").value);
+            var z=x*y;
+            document.getElementById("display").innerHTML=z;
+        }
+        function Divide_(){
+            var x=parseFloat(document.getElementById("nm1").value);
+            var y=parseFloat(document.getElementById("nm2").value);
+            var z=x/y;
+            document.getElementById("display").innerHTML=z;
+        }
+          
+    </script>
+</body>
+</html>

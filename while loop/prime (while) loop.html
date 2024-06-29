@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="digit" placeholder="Enter number greater than 1"><br>
+    <button onclick="check_()">check</button>
+    <p id="display"></p>
+    <script>
+        function check_(){
+            var i=parseFloat(document.getElementById("digit").value);
+            var j=1;
+            var c=0;
+            while (j<=i) {
+                if (i%j==0) {
+                    c=c+1;
+            
+                }
+                j=j+1;
+            
+            }
+            if(c==2){
+                document.write("Prime");
+            }
+            else{
+                document.write("Not Prime");
+            }
+            document.getElementById("display").innerHTML;
+        
+    }
+        
+    </script>
+</body>
+</html>
+
+
+
+//find factorial
+//sum of factorial of any number
+//1!/1 -2!/2 +3!/3 -4!/4........
+// 0,1,1,2,3,5,8,.........
+// lcm HCF
+// 0,1,2,4,7,11,16,..........

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="template.css">
+</head>
+<body>
+    <table id="mytbl"></table>
+    
+    <script>
+        let a=20;
+        let b=30;
+        document.getElementById("mytbl").innerHTML=`
+        <th>
+            <td class="mycss">value a</td>
+            <td class="mycss">value b</td>
+        </th>
+        <tr>
+            <td>${a}</td>
+            <td>${b}</td>
+        </tr>`;
+
+    </script>
+</body>
+</html>
