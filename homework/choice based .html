@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="que.css">
+</head>
+
+<body>
+    <button onclick="loop()">Question</button><br><br>
+    <section id="c1"> </section>
+    <section id="l"></section>
+    <script>
+        function loop() {
+            var z = 0;
+
+            while (z < 2) {
+                document.getElementById("l").innerHTML = `
+             <div id="main">
+        <h2>Press 1 for Sign in into the program </h2>
+    <h2>Press 2 for second program </h2>
+    <input type="text" id="c" placeholder=" Enter your choice "><br>
+    <button onclick="lp()">ok</button><br><br>
+    </div>
+    `;
+                document.getElementById("main").style.position = "absolute";
+                document.getElementById("main").style.zIndex = "1";
+                z++;
+            }
+        }
+        // loop();
+    </script>
+    <script>
+        function lp() {
+            var i = parseInt(document.getElementById("c").value);
+            if (i == 1) {
+                document.getElementById("c1").innerHTML = `
+                    <input type="text" id="name" placeholder="Enter user name ">
+                    <input type="password" id="pass" placeholder=" Enter password "><br>
+                    <button onclick="abc()">sign in</button> 
+                    <button onclick="loop()">Back</button>
+                    <h3 id="show"></h3>
+`;
+
+            }
+            if (i == 2) {
+                document.write(" second choice ");
+                loop();
+
+            }
+            if (i == 5) {
+                return 0;
+            }
+        }
+    </script>
+    <script>
+        function abc() {
+            var data = "";
+            var x = document.getElementById("name").value;
+            var y = document.getElementById("pass").value;
+            data += "User name " + x + "<br>Password " + y;
+            document.getElementById("show").innerHTML = data;
+            loop();
+
+        }</script>
+</body>
+
+</html>

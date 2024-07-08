@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Exactly 4 Factors</h1>
+  <input type="number" placeholder="Enter first number" id="nm1"><br>
+  <input type="number" placeholder="Enter last number" id="nm2"><br>
+
+  <button onclick="prime_()">submit</button>
+  <p id="display"></p>
+  <script>
+    function prime_() {
+      var a = parseFloat(document.getElementById("nm1").value);
+      var b = parseFloat(document.getElementById("nm2").value);
+
+      for (let x = a; x <= b; x++) {
+        var j = 1;
+        var c = 0;
+        var f = " ";
+        for (j = 1; j <= x; j++) {
+          if (x % j == 0) {
+            c = c + 1;
+            f += j;
+          }
+        }
+        if (c == 4) {
+          document.write(x, "==Has Exactly 4 factors", "<br>", "Factors Aare==>", f, "<br>");
+        }
+        else if (c == 2) {
+          document.write(x, "==is Prime", "<br>")
+        }
+      }
+      document.getElementById("display").innerHTML;
+    }
+  </script>
+</body>
+
+</html>

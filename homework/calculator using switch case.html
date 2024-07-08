@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <h4>Press 1 for addition:</h4>
+    <h4>Press 2 for substraction:</h4>
+    <h4>Press 3 for multiplication:</h4>
+    <h4>Press 4 for division:</h4>
+    <input type="number" placeholder="Enter your choice" id="choice"> <br>
+    <input type="number" placeholder="Enter 1st digit " id="nm1"> <br>
+    <input type="number" placeholder="Enter 2nd digit" id="nm2"><br>
+    
+    <button onclick="calculator_()"> check</button> 
+    <p id="Display"></p>
+    <script>
+        function calculator_() {
+            var x=parseFloat(document.getElementById("nm1").value);
+            var y=parseFloat(document.getElementById("nm2").value);
+            var a=parseFloat(document.getElementById("choice").value);
+           // alert(x);
+            switch (a){
+                case (a=1):
+                    var z=x+y;
+                    document.getElementById("Display").innerHTML=z;
+
+                    break;
+                case (a=2):
+                    var z=x-y;
+                    document.getElementById("Display").innerHTML=z;
+                    break;
+                case (a=3):
+                    var z=x*y;
+                    document.getElementById("Display").innerHTML=z;
+                    break;
+                case (a=4):
+                    var z=x/y;
+                    document.getElementById("Display").innerHTML=z;
+                    break;
+                //case 5:
+                    //default 
+                    
+                
+            }
+        }
+    </script>
+</body>
+</html>

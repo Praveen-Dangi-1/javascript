@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Choice based using While loop</h1>
+    <h4>Press "1" for store username & password</h4>
+    <h4>Press "2" for LCM & HCF</h4>
+    <h4>Press "3" for </h4>
+    <input type="text" placeholder="Enter your choice" id="choice"><br><br>
+    <input type="text" placeholder="Enter User name" id="uname"><br><br>
+    <input type="password" placeholder="Enter Password" id="pass"><br><br> 
+    
+    <button onclick="choice_()">submit</button>
+    <p id="display"></p>
+    
+    
+
+
+
+    <script>
+        function choice_(){
+            var x=parseFloat(document.getElementById("choice").value);
+            while(true){
+                if (x==1) {
+                    //alert(x);
+                    
+                    var s=document.getElementById("uname").value;
+                    var p=document.getElementById("pass").value;
+                    document.getElementById("display").innerHTML=s+"<br>"+p;
+                }
+                else if(x==2){
+                    //alert(x);
+                    var a=12;
+                    var b=1234;
+                    var c=a+b;
+                    document.getElementById("display").innerHTML=c;
+                }
+                break;
+            }
+            document.getElementById("display").innerHTML;
+
+
+
+            
+
+
+
+        }
+    </script>
+
+</body>
+</html>

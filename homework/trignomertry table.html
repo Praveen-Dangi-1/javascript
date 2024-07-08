@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="calculator"> 
+        <div class="calc_head"> 
+            <h1>Trigonometry Toolbox</h1> 
+        </div> 
+  
+        <label for="angleInput"> 
+              Enter an angle (in degrees): 
+        </label> 
+        <input type="number" 
+               id="angleInput" 
+               min="0" 
+               step="any" /> 
+  
+        <button onclick="calculateTrigFun()"> 
+            Check
+        </button> 
+        <pre id="output"></pre> 
+    </div> 
+<script>
+    
+ 
+
+function calculateTrigFun() { 
+	const angleInput = parseFloat( 
+		document.getElementById("angleInput").value); 
+
+	// ParseFloat() returns first number of the parsed value. 
+	// If first character cannot convert then NaN is returned. 
+	if (isNaN(angleInput)) { 
+		document.getElementById("output").innerText = 
+			"Please enter a valid angle."; 
+		return; 
+	} 
+
+	// Convert angleInput(degrees into Radians) 
+	const angleInRadians = angleInput * (Math.PI / 180); 
+
+	// Calculate sine value 
+	const sine = Math.sin(angleInRadians); 
+
+	// Calculate cosine value 
+	const cos = Math.cos(angleInRadians); 
+
+	// Calculate tangent value 
+	const tan = Math.tan(angleInRadians); 
+
+	// The toFixed(4) method is roundoff the 
+	// value up to 4 decimal places 
+	const outputText = `
+    Sin: ${sin.toFixed(4)}, 
+	Cos: ${cos.toFixed(4)}, 
+	Tan: ${tan.toFixed(4)}, 
+	Cosec: ${(1 / sin).toFixed(4)}, 
+	Sec: ${(1 / cos).toFixed(4)}, 
+	Cot: ${(1 / tan).toFixed(4)}`; 
+
+	// Dispaly the output 
+	document.getElementById("output").innerText = outputText; 
+}
+</script>
+</body>
+
+</html>
