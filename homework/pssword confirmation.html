@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>password confirm</h1>
+    <input type="password" id="nm1" placeholder="Enter password"><br>
+    <input type="password" id="nm2" placeholder="Confirm password"><br>
+    <button onclick="cnf_()">Confirm</button>
+    <p id="display"> </p>
+
+
+    <script>
+        function cnf_(){
+        
+            var x=parseFloat(document.getElementById("nm1").value);
+            var y=parseFloat(document.getElementById("nm2").value);
+            if(x==y){
+                document.getElementById("display").innerHTML="password match";
+            }
+            else{
+                document.getElementById("display").innerHTML=x+"<br>"+y+"<br>"+" password not match ";
+            }
+
+        }
+    
+    </script>
+</body>
+</html>

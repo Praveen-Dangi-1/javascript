@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque;
+}
+nav{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(165, 255, 255);
+    top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    position: relative;
+    text-align: center;
+    color: blueviolet;
+}
+h1:hover{
+    background-color: azure;
+    cursor: pointer;
+    color: rgb(198, 14, 208);
+}
+a{
+    color: brown;
+    text-decoration: none;
+    background-color: transparent;
+    margin-right: 0px;
+    text-align:end;
+}
+a:hover{
+    color: black;
+}
+img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+
+}

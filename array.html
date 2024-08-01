@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        var a=[1,2,3,4,5,6,7,8,9];
+        var c=new Array();
+        document.write(a.length,"<br>");
+        document.write(a.toString(),"<br>");
+        document.write(a.toLocaleString(),"<br>");
+        var b=1234;
+        document.write(b.toString(),"<br>");
+        document.write(b.toLocaleString(),"<br>");
+        document.write(a.join("---"),"<br>");
+        document.write(a.includes(1),"<br>")
+        delete a[1];
+        document.write(a,"<br>");
+        document.write(a.copyWithin(6,4),"<br>");
+        document.write(a.unshift(),"<br>");//length and unshift me koi antar nahi hh
+
+        document.write(a.pop(),"<br>");
+        document.write(a,"<br>");
+        document.write(a.push("hello"),"<br>");
+        document.write(a,"<br>");
+        document.write(Array.isArray(a),"<br>");
+        document.write(a.splice(2,4,"bhopal"),"<br>");
+        document.write(a,"<br>");
+        
+        var arr2=['a','b','c','d','e','e'];
+
+        arr2.map((val)=>{
+            document.write(val+"z","<br>");
+        })
+
+
+
+
+    </script>
+</body>
+</html>

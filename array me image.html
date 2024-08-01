@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome</h1>
+    <div id="myimg">
+      
+    </div>
+   <img src="" alt="">
+    
+    <script>
+        var arr=['images/html.jpeg','images/java.jpeg'];
+        var arr1=["Price = 239","Price = 339"];
+        var arr2=["Buy Now","Buy Now"];
+        var i="";
+        for (let x=0;x<arr.length; x++ ) {
+            i+=` <img src="${arr[x]}" alt="image"> 
+                <h1>${arr1[x]}</h1>
+                <h4>${arr2[x]}</h4>`;
+            
+        }
+        
+        document.getElementById("myimg").innerHTML=i;
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="colorpicker()">click</button>
+    <p id="data"></p>
+    <script>
+        let x=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
+        let data=document.getElementById("data");
+        function colorpicker(){
+            // console.log(random_number())
+            let y="#";
+            for(i=0;i<6;i++){
+                y+=x[random_number()];
+                
+            }
+            data.innerHTML=y;
+            document.body.style.backgroundColor=y;
+            data.innerHTML=y;
+        }
+        // colorpicker();
+        function random_number(){
+            return Math.floor(Math.random()*x.length);
+        }
+    </script>
+</body>
+</html>

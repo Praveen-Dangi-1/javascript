@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Random number of 6 digit</h1>
+    <button onclick="six_()" >click</button>
+    <p id="ludo"></p>
+    <script>
+       function six_(){
+        var a=parseInt(Math.random()*100000)+100000;
+        document.getElementById("ludo").innerHTML=a;
+       }
+    </script>
+</body>
+</html>

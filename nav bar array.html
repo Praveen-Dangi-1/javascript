@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav bar array.css">
+</head>
+<body>
+    <h1>Nav bar</h1>
+    <nav id="nav">
+        
+    </nav>
+
+
+    <script>
+        var nav_data=["","Home","About","Services","Contact Us"];
+        var nav_link="";
+        nav_data.map((val)=>{
+            nav_link+=`<a href="">${val}</a>`;
+        })
+        document.getElementById("nav").innerHTML=nav_link+'<img src="images/1718097331111.jpg" alt="">';
+    </script>
+</body>
+</html>
